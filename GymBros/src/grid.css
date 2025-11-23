@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "menu menu"
+    "content content"
+    "content2 content2"
+    "footer footer";
+  grid-template-columns: 2fr 8fr;
+  gap: 0px;
+  background-color: black;
+  padding: 0px;
+}
+.container div {
+  background-color: white;
+  padding: 0px;
+}
+.container div.content {
+  grid-area:content2 ;
+  text-align: center;
+}
+.container div.menu {
+  grid-area: menu;
+  background-color:black;
+}
+.container div.content2 {
+    grid-area: content;
+    text-align: center;
+}
+.container div.footer {
+  grid-area: footer;
+  text-align: center;  
+  background-color:black;
+}
