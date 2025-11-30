@@ -14,7 +14,7 @@ nav ul {
   list-style: none;
   margin-top: 0px;
   display:flex;
-  align-items:flex-end;
+  align-items:;
 }
 
 nav ul li{
