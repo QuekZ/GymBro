@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Form - GymBros</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+
+  <div class="item-1">
+    <div class="logo">
+      <img src="dumbell.png" alt="Logo">
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="form.html">Form</a></li>
+      <li><a href="plan-result.html">Your Plan</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+
+    <a class="join-btn" href="login.html">Join Now</a>
+  </div>
+
+  <div class="form-container">
+    <div class="form-box">
+      <h2>Your <span class="orange">Perfect Plan</span> Starts Here</h2>
+      <p class="form-subtitle">Answer a few questions to get your personalized training plan</p>
+
+      <form id="planForm">
+        <div class="form-progress">
+          <div class="progress-step active">1</div>
+          <div class="progress-step">2</div>
+          <div class="progress-step">3</div>
+          <div class="progress-step">4</div>
+        </div>
+
+        <!-- Step 1: Basic Info -->
+        <div class="form-step active">
+          <h3>Basic Information</h3>
+          <div class="input-group">
+            <label for="height">Height (cm)</label>
+            <select id="height" name="height" required>
+              <option value="" disabled selected>Select height</option>
+              <option value="short">150 - 159 cm</option>
+              <option value="average-short">160 - 169 cm</option>
+              <option value="average">170 - 179 cm</option>
+              <option value="average-tall">180 - 189 cm</option>
+              <option value="tall">190 - 200+ cm</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="weight">Weight (kg)</label>
+            <select id="weight" name="weight" required>
+              <option value="" disabled selected>Select weight</option>
+              <option value="light">40 - 59 kg</option>
+              <option value="average">60 - 79 kg</option>
+              <option value="heavy">80 - 100+ kg</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="experience">Fitness Experience</label>
+            <select id="experience" name="experience" required>
+              <option value="" disabled selected>Select your experience level</option>
+              <option value="beginner">Beginner (0-6 months)</option>
+              <option value="intermediate">Intermediate (6-18 months)</option>
+              <option value="advanced">Advanced (18+ months)</option>
+            </select>
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" class="next-btn">Next Step</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Goals -->
+        <div class="form-step">
+          <h3>Your Goals</h3>
+          <div class="input-group">
+            <label for="goal">Primary Goal</label>
+            <select id="goal" name="goal" required>
+              <option value="" disabled selected>Select your main goal</option>
+              <option value="fat-loss">Lose Fat & Tone</option>
+              <option value="muscle-gain">Build Muscle Mass</option>
+              <option value="strength">Gain Strength</option>
+              <option value="athletic">Become Athletic</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="timeframe">Time Commitment</label>
+            <select id="timeframe" name="timeframe" required>
+              <option value="" disabled selected>Days per week</option>
+              <option value="3days">3 days per week</option>
+              <option value="4days">4 days per week</option>
+              <option value="5days">5 days per week</option>
+              <option value="6days">6 days per week</option>
+            </select>
+          </div>
+
+          <div class="checkbox-group">
+            <label>Available Equipment</label>
+            <div class="checkbox-options">
+              <label class="checkbox">
+                <input type="checkbox" name="equipment" value="gym">
+                <span>Full Gym Access</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="equipment" value="home">
+                <span>Home Equipment</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="equipment" value="bodyweight">
+                <span>Bodyweight Only</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="button" class="next-btn">Next Step</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Lifestyle -->
+        <div class="form-step">
+          <h3>Lifestyle & Preferences</h3>
+          <div class="input-group">
+            <label for="diet">Diet Preference</label>
+            <select id="diet" name="diet" required>
+              <option value="" disabled selected>Select diet preference</option>
+              <option value="standard">Standard Diet</option>
+              <option value="vegetarian">Vegetarian</option>
+              <option value="vegan">Vegan</option>
+              <option value="flexible">Flexible</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="injuries">Any Injuries or Limitations?</label>
+            <select id="injuries" name="injuries">
+              <option value="none" selected>No injuries or limitations</option>
+              <option value="knee">Knee issues</option>
+              <option value="back">Back problems</option>
+              <option value="shoulder">Shoulder issues</option>
+              <option value="wrist">Wrist problems</option>
+            </select>
+          </div>
+
+          <div class="radio-group">
+            <label>Training Style Preference</label>
+            <div class="radio-options">
+              <label class="radio">
+                <input type="radio" name="style" value="classic" required>
+                <span>Classic Bodybuilding</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="style" value="power">
+                <span>Powerlifting Focus</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="style" value="functional">
+                <span>Functional Fitness</span>
+              </label>
+              <label class="radio">
+                <input type="radio" name="style" value="hiit">
+                <span>HIIT & Cardio</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="button" class="next-btn">Next Step</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Review -->
+        <div class="form-step">
+          <h3>Review Your Selections</h3>
+          <div class="review-summary">
+            <div class="summary-item">
+              <span class="summary-label">Experience Level:</span>
+              <span class="summary-value" id="review-experience">-</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Primary Goal:</span>
+              <span class="summary-value" id="review-goal">-</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Time Commitment:</span>
+              <span class="summary-value" id="review-timeframe">-</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Equipment:</span>
+              <span class="summary-value" id="review-equipment">-</span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Training Style:</span>
+              <span class="summary-value" id="review-style">-</span>
+            </div>
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" class="prev-btn">Previous</button>
+            <button type="submit" class="submit-btn">Generate My Plan!</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="item-4">
+    <footer class="footer">
+      <div class="footer-logo">
+        <img src="dumbell.png" alt="Logo">
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="form.html">Form</a>
+        <a href="plan-result.html">Your Plan</a>
+        <a href="about.html">About</a>
+      </div>
+
+      <div class="footer-bottom">
+        © 2025 GymBros. All Rights Reserved.
+      </div>
+    </footer>
+  </div>
+
+  <script src="form.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Your Personalized Plan - GymBros</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="plan-styles.css">
+</head>
+
+<body>
+
+  <div class="item-1">
+    <div class="logo">
+      <img src="dumbell.png" alt="Logo">
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="form.html">Form</a></li>
+      <li><a href="plan-result.html">Your Plan</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+
+    <a class="join-btn" href="login.html">Join Now</a>
+  </div>
+
+  <div class="plan-result-container">
+    <div class="plan-header">
+      <h1>Your <span class="orange">Personalized</span> Training Plan</h1>
+      <p class="plan-subtitle" id="plan-description"></p>
+      
+      <div class="plan-type-badge" id="plan-type"></div>
+      
+      <div class="plan-summary" id="user-summary">
+        <!-- Filled by JavaScript -->
+      </div>
+    </div>
+
+    <div class="plan-content">
+      <!-- Plan will be loaded dynamically by JavaScript -->
+      <div id="plan-content"></div>
+    </div>
+
+    <div class="plan-actions">
+      <button class="btn-secondary" onclick="window.print()">
+         Print Plan
+      </button>
+      <button class="btn-primary" onclick="savePlan()">
+         Save Plan
+      </button>
+      <a href="form.html" class="btn-secondary">
+         Edit Preferences
+      </a>
+    </div>
+  </div>
+
+  <div class="item-4">
+    <footer class="footer">
+      <div class="footer-logo">
+        <img src="dumbell.png" alt="Logo">
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="form.html">Form</a>
+        <a href="plan-result.html">Your Plan</a>
+        <a href="about.html">About</a>
+      </div>
+
+      <div class="footer-bottom">
+        © 2025 GymBros. All Rights Reserved.
+      </div>
+    </footer>
+  </div>
+
+  <script src="plan-results.js"></script>
+</body>
+</html>

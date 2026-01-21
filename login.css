@@ -1,0 +1,371 @@
+/* LOGIN PAGE LAYOUT */
+.login-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+  padding: 80px 0;
+  background-color: #181818;
+  min-height: 60vh;
+  align-items: center;
+  gap: 40px;
+}
+
+/* CENTER COLUMN login box */
+.login-box {
+  grid-column: 2; /* center column */
+  background-color: #1c1c1c;
+  padding: 50px 40px;
+  border-radius: 16px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+.login-box h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 2px solid #333;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #ff7b00;
+  background-color: #333;
+  box-shadow: 0 0 0 3px rgba(255, 123, 0, 0.1);
+}
+
+.input-group input::placeholder {
+  color: #888;
+  opacity: 0.7;
+}
+
+.login-btn {
+  width: 100%;
+  background-color: #ff7b00;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.login-btn:hover {
+  background-color: #ff8f2e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 123, 0, 0.3);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+}
+
+.register-text {
+  margin-top: 25px;
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+.register-text a {
+  text-decoration: none;
+  color: #ff7b00;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.register-text a:hover {
+  color: #ff8f2e;
+  text-decoration: underline;
+}
+
+/* Additional utility styles */
+.forgot-password {
+  text-align: right;
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+
+.forgot-password a {
+  color: #ff7b00;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.forgot-password a:hover {
+  color: #ff8f2e;
+  text-decoration: underline;
+}
+
+/* ============ TABLET STYLES (768px - 1024px) ============ */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .login-container {
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 60px 40px;
+    min-height: 50vh;
+    gap: 30px;
+  }
+
+  .login-box {
+    grid-column: 2;
+    padding: 40px 35px;
+  }
+
+  .login-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .input-group {
+    margin-bottom: 22px;
+  }
+
+  .input-group input {
+    padding: 13px 15px;
+    font-size: 0.95rem;
+  }
+
+  .login-btn {
+    padding: 13px;
+    font-size: 0.95rem;
+  }
+
+  .register-text {
+    margin-top: 22px;
+    font-size: 0.92rem;
+  }
+}
+
+/* ============ MOBILE STYLES (768px and below) ============ */
+@media (max-width: 768px) {
+  .login-container {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    min-height: calc(100vh - 200px);
+    gap: 0;
+    align-items: flex-start;
+  }
+
+  .login-box {
+    grid-column: 1;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 35px 25px;
+  }
+
+  .login-box h2 {
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+  }
+
+  .input-group {
+    margin-bottom: 20px;
+  }
+
+  .input-group label {
+    font-size: 0.92rem;
+    margin-bottom: 6px;
+  }
+
+  .input-group input {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    border-width: 1px;
+  }
+
+  .login-btn {
+    padding: 13px;
+    font-size: 0.95rem;
+    margin-top: 5px;
+  }
+
+  .register-text {
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+
+  .forgot-password {
+    margin-top: -12px;
+    margin-bottom: 18px;
+  }
+
+  .forgot-password a {
+    font-size: 0.85rem;
+  }
+}
+
+/* ============ SMALL MOBILE STYLES (480px and below) ============ */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 30px 15px;
+    min-height: calc(100vh - 150px);
+  }
+
+  .login-box {
+    padding: 30px 20px;
+    border-radius: 12px;
+  }
+
+  .login-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .input-group {
+    margin-bottom: 18px;
+  }
+
+  .input-group label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
+  .input-group input {
+    padding: 11px 12px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+
+  .login-btn {
+    padding: 12px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+  }
+
+  .register-text {
+    margin-top: 18px;
+    font-size: 0.85rem;
+  }
+
+  .forgot-password {
+    margin-top: -10px;
+    margin-bottom: 15px;
+  }
+
+  .forgot-password a {
+    font-size: 0.8rem;
+  }
+}
+
+/* ============ LARGE DESKTOP STYLES (1440px and above) ============ */
+@media (min-width: 1440px) {
+  .login-container {
+    padding: 100px 0;
+    min-height: 70vh;
+  }
+
+  .login-box {
+    padding: 60px 50px;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .login-box h2 {
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+  }
+
+  .input-group {
+    margin-bottom: 28px;
+  }
+
+  .input-group input {
+    padding: 16px 18px;
+    font-size: 1.05rem;
+  }
+
+  .login-btn {
+    padding: 16px;
+    font-size: 1.05rem;
+  }
+
+  .register-text {
+    margin-top: 28px;
+    font-size: 1rem;
+  }
+}
+
+/* ============ ACCESSIBILITY IMPROVEMENTS ============ */
+/* Focus styles for keyboard navigation */
+.login-btn:focus,
+.input-group input:focus {
+  outline: 2px solid #ff7b00;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .input-group input {
+    border-color: #ffffff;
+  }
+  
+  .login-box {
+    border: 1px solid #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .login-box,
+  .login-btn,
+  .input-group input {
+    transition: none;
+  }
+  
+  .login-box:hover {
+    transform: none;
+  }
+  
+  .login-btn:hover {
+    transform: none;
+  }
+}
+
+/* Dark mode consistency (already dark, but ensuring consistency) */
+@media (prefers-color-scheme: dark) {
+  .login-box {
+    background-color: #1c1c1c;
+  }
+  
+  .input-group input {
+    background-color: #2a2a2a;
+    color: white;
+  }
+}

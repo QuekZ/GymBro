@@ -1,0 +1,387 @@
+/* EXERCISE TEMPLATE WITH IMAGES */
+
+.exercise {
+  background-color: #252525;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.exercise:hover {
+  border-color: rgba(255,123,0,0.3);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.exercise-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.exercise-title-wrapper {
+  flex: 1;
+}
+
+.exercise-header h4 {
+  margin: 0 0 5px 0;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.sets {
+  background-color: #333;
+  color: #ff7b00;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.exercise-toggle {
+  background-color: #333;
+  color: white;
+  border: 1px solid #444;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.exercise-toggle:hover {
+  background-color: #3a3a3a;
+  border-color: #ff7b00;
+}
+
+/* Exercise Content */
+.exercise-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+/* Image Gallery */
+.exercise-image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-image {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  aspect-ratio: 1 / 1;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.main-image:hover img {
+  transform: scale(1.03);
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: white;
+  padding: 12px 15px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.thumbnail-images {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.thumbnail:hover {
+  opacity: 0.8;
+}
+
+.thumbnail.active {
+  opacity: 1;
+  border-color: #ff7b00;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Exercise Details */
+.exercise-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-label {
+  font-size: 0.85rem;
+  color: #ff7b00;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 0.95rem;
+  color: white;
+}
+
+.exercise-instructions h5,
+.exercise-notes h5 {
+  color: #ff7b00;
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.exercise-instructions ol {
+  margin: 0;
+  padding-left: 20px;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.6;
+}
+
+.exercise-instructions li {
+  margin-bottom: 8px;
+}
+
+.exercise-instructions li:last-child {
+  margin-bottom: 0;
+}
+
+.exercise-notes p {
+  margin: 0;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.6;
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid #ff7b00;
+}
+
+/* Exercise Meta */
+.exercise-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+}
+
+.meta-icon {
+  font-size: 1.1rem;
+}
+
+.video-btn {
+  background-color: transparent;
+  color: #ff7b00;
+  border: 1px solid #ff7b00;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.video-btn:hover {
+  background-color: rgba(255,123,0,0.1);
+}
+
+/* ============ RESPONSIVE STYLES ============ */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .exercise-content {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 25px;
+  }
+  
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .main-image {
+    aspect-ratio: 4/3;
+  }
+}
+
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
+  .exercise {
+    padding: 20px;
+  }
+  
+  .exercise-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .exercise-toggle {
+    align-self: stretch;
+    text-align: center;
+  }
+  
+  .exercise-content {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .main-image {
+    aspect-ratio: 16/9;
+  }
+  
+  .thumbnail-images {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .exercise-meta {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .video-btn {
+    align-self: stretch;
+    text-align: center;
+  }
+}
+
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+  .exercise {
+    padding: 15px;
+  }
+  
+  .exercise-header h4 {
+    font-size: 1.2rem;
+  }
+  
+  .sets {
+    font-size: 0.85rem;
+  }
+  
+  .main-image {
+    aspect-ratio: 1/1;
+  }
+  
+  .thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .exercise-instructions ol,
+  .exercise-notes p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Image Modal for Fullscreen View */
+.image-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-modal.active {
+  display: flex;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* JavaScript Toggle for Exercise Details */
+.exercise-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.exercise.expanded .exercise-content {
+  max-height: 2000px; /* Adjust based on content */
+}
